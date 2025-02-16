@@ -6,7 +6,6 @@
 //5) delete at any given index
 //Code
 #include <stdio.h>
-
 // Insert at end
 void insertend(int arr[], int *lastvalid, int size) {
     if ((*lastvalid) >= size - 1) {
@@ -92,7 +91,11 @@ int main() {
     int choice, index, value;
     printf("Choose operation (1-5): ");
     scanf("%d", &choice);
-
+    printf("1- To  insert element at the end of array");
+    printf(" 2- To insert element at specific index in an array");
+    printf("3-To update value at specific index in an array");
+    printf("4- To delete at the value at the end");
+    printf("5- To delete the value at  specific index");
     switch (choice) {
         case 1: insertend(arr, &lastvalidindex, n); break;
         case 2: 
@@ -112,7 +115,6 @@ int main() {
             deleteatindex(arr, &lastvalidindex, index);
             break;
     }
-
     printf("Final array: ");
     for (int i = 0; i <= lastvalidindex; i++) {
         printf("%d ", arr[i]);
